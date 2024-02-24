@@ -427,6 +427,12 @@ if [ $LAN_CLAYNET -eq 0 ]; then
         printf "> create folder -> $CLAYNET_SRC"
         mkdir $CLAYNET_SRC  && echo "... OK" || exit 1
     else 
+
+        if [ -d "$CLAYNET_SRC/CLAYNET_SRC" ]; then
+            printf "> remove unused folder -> $CLAYNET_SRC/CLAYNET_SRC"
+            rm $CLAYNET_SRC/CLAYNET_SRC  && echo "... OK" || exit 1
+        fi
+
         echo "$CLAYNET_SRC ... OK"
     fi
 else
