@@ -1,6 +1,6 @@
-LAN_CLAYNET=1
-LAN_PROJECT=1
-EXT=0
+LAN_CLAYNET=0
+LAN_PROJECT=0
+EXT=1
 
 ASK=0         # 0 TO SKIP ASK - OR 1 TO ASK
 CONFIRM=""   # "" TO SKIP CONFIRMING - OR ANYTHING TO GO CONFIRMING
@@ -635,11 +635,11 @@ echo
 #
 #
 
-printf "      RESULT -- "  
+printf "      RESULT : "  
 if [ $EXT -eq 1 ]; then
-    printf "EXT"
+    printf "+EXT"
 else
-    printf "NO_EXT"
+    printf "+NO_EXT"
 fi
 if [ $LAN -gt 0 ];
 then
@@ -654,7 +654,7 @@ then
     printf " ( $IPADDR )"
     echo
 else
-    echo " - NO LAN"
+    echo " +NO_LAN"
 fi
 echo "--------------------------------------------------------------------------------------"  
 
