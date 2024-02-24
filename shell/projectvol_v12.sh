@@ -1,5 +1,5 @@
-LAN_CLAYNET=0
-LAN_PROJECT=0
+LAN_CLAYNET=1
+LAN_PROJECT=1
 EXT=0
 
 ASK=0         # 0 TO SKIP ASK - OR 1 TO ASK
@@ -229,7 +229,7 @@ header() {
                 echo
                 echo ">>>>>> ERROR - NO EXTERNAL DRIVE !"
                 echo
-                read -p 'SWITCH TO LOCAL ? ' USELOCAL
+                read -p 'SWITCH TO INTERNAL DRIVE ? ' USELOCAL
                 if [ "$USELOCAL" = "" ]; then
                     EXT=0
                     echo
@@ -639,7 +639,7 @@ printf "      RESULT -- "
 if [ $EXT -eq 1 ]; then
     printf "EXT"
 else
-    printf "LOCAL"
+    printf "NO_EXT"
 fi
 if [ $LAN -gt 0 ];
 then
