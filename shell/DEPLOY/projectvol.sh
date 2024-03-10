@@ -125,6 +125,7 @@ askme() {
             
         fi
         echo
+        echo "$LAN_CLAYNET - $LAN_PROJECT - $EXT"
         read -p "CONFIRM ? " CONFIRM
 
         if ! [ "$CONFIRM" = "" ]; then
