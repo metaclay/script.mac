@@ -521,12 +521,16 @@ rmdir $TEMPDIR && echo "... OK" || echo "... CAN'T REMOVE - SKIP"
 # remove MAIN TREE FOLDERS
 declare -a PROJECTVOL_ARR=( 
     "$PROJECTVOL/localized/_Volumes/PROJECTVOL/CLAYNET" 
+    "$PROJECTVOL/localized/_Volumes/PROJECTVOL/CLAYNET/CLAYNET_SRC" #remove err folder
     "$PROJECTVOL"   
     "$HOME_LOCAL/Desktop/PROJECTVOL" 
     "$HOME_EXT/$CLAY/PROJECTVOL_SRC/CLAYNET" 
+    "$HOME_EXT/$CLAY/PROJECTVOL_SRC/CLAYNET/CLAYNET_SRC" #remove err folder
     "$HOME_EXT/$CLAY/PROJECTVOL_SRC/projects" 
     "$HOME_LOCAL/$CLAY/PROJECTVOL_SRC/CLAYNET" 
     "$HOME_LOCAL/$CLAY/PROJECTVOL_SRC/projects" 
+    "$HOME_EXT_PUB/.__CLAY__/CLAYNET_SRC/CLAYNET_SRC" #remove err folder
+    "$HOME_LOCAL_PUB/.__CLAY__/CLAYNET_SRC/CLAYNET_SRC" #remove err folder   
     )
 
 for i in "${PROJECTVOL_ARR[@]}"
